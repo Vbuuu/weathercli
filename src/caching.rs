@@ -13,7 +13,7 @@ pub fn save(data: WeatherData) {
     let file = {
         let mut path = cache_dir().unwrap();
 
-        path.push("asteroid.toml");
+        path.push("weather-cli.toml");
 
         path
     };
@@ -30,7 +30,7 @@ pub fn load(config: &Config) -> Option<WeatherData> {
     let file = {
         let mut path = cache_dir().unwrap();
 
-        path.push("asteroid.toml");
+        path.push("weather-cli.toml");
 
         path
     };

@@ -12,7 +12,7 @@ mod providers;
 mod duration_format {
     use crate::parse_duration;
     use chrono::Duration;
-    use serde::{de, Deserializer, Serializer};
+    use serde::{Deserializer, Serializer, de};
     use std::fmt;
     use std::fmt::Formatter;
 
@@ -196,21 +196,24 @@ impl ConfigUnits {
         match self {
             ConfigUnits::Metric => "celsius",
             ConfigUnits::Imperial => "fahrenheit",
-        }.to_string()
+        }
+        .to_string()
     }
 
     fn speed(&self) -> String {
         match self {
             ConfigUnits::Metric => "kmh",
             ConfigUnits::Imperial => "mph",
-        }.to_string()
+        }
+        .to_string()
     }
 
     fn to_string(&self) -> String {
         match self {
             ConfigUnits::Metric => "metric",
             ConfigUnits::Imperial => "imperial",
-        }.to_string()
+        }
+        .to_string()
     }
 }
 
@@ -264,7 +267,7 @@ fn read_config() -> Config {
         let mut path = home_dir().unwrap();
 
         path.push(".config");
-        path.push("asteroid.toml");
+        path.push("weather-cli.toml");
 
         path
     };

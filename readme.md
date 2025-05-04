@@ -1,6 +1,6 @@
 ## Konfiguration
 
-Asteroid verwendet eine TOML-Konfigurationsdatei, die unter `~/.config/asteroid.toml` gespeichert wird.
+Weather-cli verwendet eine TOML-Konfigurationsdatei, die unter `~/.config/weather-cli.toml` gespeichert wird.
 
 ### Konfigurationsoptionen
 
@@ -32,10 +32,12 @@ Falls keine `location` angegeben wird, werden deine aktuellen Koordinaten über 
 
 ## Ausgabe
 
-Asteroid zeigt folgende Informationen an:
+Weather-cli zeigt folgende Informationen an:
+
 - Aktuelle Temperatur und gefühlte Temperatur
 - Wetterbedingung und Windgeschwindigkeit (mit Richtung)
 - Aktuelle Zeit und verwendete Datenquelle
 
 ## Caching
-Asteroid speichert abgerufene Wetterdaten zwischen und verwendet diese bei wiederholten Aufrufen.
+
+Weather-cli speichert abgerufene Wetterdaten zwischen und verwendet diese bei wiederholten Aufrufen.
